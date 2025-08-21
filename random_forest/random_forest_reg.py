@@ -1,3 +1,5 @@
+import decision_tree
+
 class MyForestReg:
     def __init__(self, 
                 n_estimators: int = 10, 
@@ -16,6 +18,7 @@ class MyForestReg:
         self._min_samples_split = min_samples_split
         self._max_leafs = max_leafs
         self._bins = bins
+        self._leafs_cnt = 0
         
     def __str__(self) -> str:
         return f'MyForestReg class: n_estimators={self._n_estimators}, max_features={self._max_features}, max_samples={self._max_samples}, max_depth={self._max_depth}, min_samples_split={self._min_samples_split}, max_leafs={self._max_leafs}, bins={self._bins}, random_state={self._random_state}'

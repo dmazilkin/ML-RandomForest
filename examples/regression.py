@@ -1,4 +1,4 @@
-from src.random_forest_reg import MyForestReg
+from random_forest.random_forest_reg import MyForestReg
 
 def regression():
     model = MyForestReg()
