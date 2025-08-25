@@ -13,4 +13,3 @@ def regression():
     X, y = create_data_regression()
     model = MyForestReg()
     model.fit(X, y)
-    

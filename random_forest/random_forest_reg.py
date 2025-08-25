@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import random 
 from typing import List, Tuple
 
@@ -41,7 +42,14 @@ class MyForestReg:
         
         for _ in range(self._n_estimators):
             X_estimator, y_estimator = self._create_dataset(X, y)
-            print(X_estimator, y_estimator)
             self._trees.append(MyTreeReg(max_depth=self._max_depth, min_samples_split=self._min_samples_split, max_leafs=self._max_leafs, bins=self._bins))
             self._trees[-1].fit(X_estimator, y_estimator)
             self.leafs_cnt += self._trees[-1]._leafs_cnt
+            
+    def predict(self, X: pd.DataFrame) -> pd.Series:
+        predicts = np.zeros((X.shape[0],), dtype='float')
+        
+        for tree in self._trees:
+            predicts += tree.predict(X)
+
+        return predicts / self._n_estimators

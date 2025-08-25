@@ -110,20 +110,21 @@ tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
 name = "decision-tree-dmazilkin"
-version = "0.1.0"
+version = "0.1.1"
 description = "This package contains the Decition Tree algrotihm implementation."
 optional = false
 python-versions = ">=3.12"
 groups = ["main"]
 files = [
-    {file = "decision_tree_dmazilkin-0.1.0-py3-none-any.whl", hash = "sha256:d706c9539597bc3aa02c910d8e783e0f8ed4d87601d5bd230d63b7f293c959fe"},
-    {file = "decision_tree_dmazilkin-0.1.0.tar.gz", hash = "sha256:aa152157a0820227bfa89900eae2a7b6c2f1a9ebb115dfc430d0fc017fabde15"},
+    {file = "decision_tree_dmazilkin-0.1.1-py3-none-any.whl", hash = "sha256:4ae5b059c1fbcb5755683ee8935b38803d6733648f51b9b23ff1b0cac1f4c78a"},
+    {file = "decision_tree_dmazilkin-0.1.1.tar.gz", hash = "sha256:6d096bf2c08411fc45fc53bf95ad6bcd513c227b42dd642f0194208a05f71054"},
 ]
 
 [package.dependencies]
 matplotlib = ">=3.10.5,<4.0.0"
 numpy = ">=2.3.2,<3.0.0"
 pandas = ">=2.3.1,<3.0.0"
+scikit-learn = ">=1.7.1,<2.0.0"
 
 [[package]]
 name = "fonttools"
